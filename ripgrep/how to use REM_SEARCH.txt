@@ -1,0 +1,34 @@
+
+How to use it:
+
+   1. Save the code: nano rem_search.sh
+   2. Make it executable: chmod +x rem_search.sh
+   3. Run it: ./rem_search.sh php casino
+
+Recommended "Scan List" for your Script:
+Try running these back-to-back:
+
+./rem_search.sh php "eval(base64_decode"
+./rem_search.sh php "gzinflate"
+./rem_search.sh php "str_rot13"
+./rem_search.sh js "atob"
+./rem_search.sh js "String.fromCharCode"
+
+
+=========================================================================
+Here is an example of what you will see if you run the script to search for the word "casino" inside ".php" files.
+1. What you see on your SCREEN (Terminal)
+If the script finds matches, your terminal will look like this:
+
+---------------------------------------
+[2024-05-20 14:30:05] MATCHES FOUND:
+---------------------------------------
+--- Search: 'casino' in *.php at 2024-05-20 14:30:05 ---
+wp-content/themes/twentytwenty/header.php
+wp-content/plugins/akismet/admin.php
+index.php
+
+---------------------------------------
+Results appended to: suspect_results.txt
+
+=========================================================================

@@ -1,0 +1,15 @@
+backup the directory first: 
+zip -r backup_name.zip /path/to/directory
+
+
+Make it executable:
+chmod +x srchrep.sh
+
+
+example of usage:
+Test the replacement first with --dry-run:
+./srchrep.sh 'http://free.timeanddate.com' 'https://free.timeanddate.com' --dry-run
+
+
+If the output looks correct, apply the changes:
+./srchrep.sh 'http://maps.googleapis.com' 'https://maps.googleapis.com' 
